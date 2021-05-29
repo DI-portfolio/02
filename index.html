@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あんこのおみせ</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/arrow.css">
+    <link rel="stylesheet" href="css/imageMove.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div id="loading"><!--------------- ローディング時の画面 --------------->
+        <div class="loading-title">
+            <img src="img/sakura-illust-wb-300px.png" alt="">
+        </div>
+        <div class="loading-logo">
+            <img src="img/loading01.gif" alt="">
+        </div>
+    </div><!-------------------------->
+    
+<header><!--------------- ヘッダー --------------->
+    <div class="header-slider"><!-- トップ画像のスライダー -->
+        <ul class="header-slider-image">
+            <li class="header-slider-item header-slider-item01"></li>
+            <li class="header-slider-item header-slider-item02"></li>
+            <li class="header-slider-item header-slider-item03"></li>
+        </ul>
+        <figure class="header-logo"><!-- ヘッダーロゴ -->
+            <img src="img/sakura-illust-wb-300px.png" alt="あんこのおみせ">
+        </figure>
+        <div class="header-text"><!-- ヘッダーの店名とメッセージテキスト -->
+            <h1><span>あんこのおみせ</span></h1>
+            <p>ここに店のコンセプト等のテキストが入ります。<br>ここに店のコンセプト等のテキストが入ります。</p>
+        </div>
+        
+        <div class="header-open-nav"><!-- 画面幅768px以下時のハンバーガーメニュー -->
+            <div class="open-btn"><span></span><span></span><span></span></div>
+            <nav class="open-nav">
+                <ul class="open-nav-list" id="open-nav-list">
+                    <li><a href="body" class="btn"><span>top</span></a></li>
+                    <li><a href=".items" class="btn"><span>items</span></a></li>
+                    <li><a href=".about" class="btn"><span>about</span></a></li>
+                    <li><a href=".recruit" class="btn"><span>recruit</span></a></li>
+                    <li><a href="" class="btn"><span>shopping</span></a></li>
+                </ul>
+                <span><a href=""><i class="fa facebook fa-facebook-square header-facebook fa-3x"></i></a></span>
+                <span><a href=""><i class="fa twitter fa-twitter-square header-twitter fa-3x"></i></a></span>
+            </nav>
+        </div><!---------->
+        
+        <div class="scrolldown"><!-- ヘッダーのスクロールを促す矢印 -->
+            <div id="scrolldown"></div>
+        </div>
+    </div>
+</header><!------------------------------>
+
+<div class="container">
+    <div class="wrapper">
+        <main>
+            <section class="items"><!--------------- 商品紹介 --------------->
+                <div class="section-title"><!-- セクションタイトル -->
+                    <h2>商品紹介</h2>
+                </div>
+                <div class="items-container">
+                    <ul><!-- 各商品画像と説明テキストリスト -->
+                        <li class="items-list-box">
+                            <div class="items-list items-image-list01">
+                                <ul class="items-list-slider"><!-- 一番上の商品画像のスライダー -->
+                                    <li><img src="img/dorayaki.jpg" alt="どら焼き"></li>
+                                    <li><img src="img/dorayaki-nocut.jpg" alt="どら焼き"></li>
+                                    <li><img src="img/dorayaki-variety.jpg" alt="どら焼き"></li>
+                                </ul>
+                            </div>
+                            <div class="items-text items-text01"><!-- 一番上の商品画像の説明テキスト -->
+                                <p>ここに紹介テキストが入ります。ここに紹介テキストが入ります。ここに紹介テキストが入ります。ここに紹介テキストが入ります。ここに紹介テキストが入ります。ここに紹介テキストが入ります。</p>
+                            </div>
+                        </li>
+                        <li class="items-list-box">
+                            <div class="items-list items-image-list02">
+                                <ul class="items-list-slider"><!-- 真ん中の商品画像のスライダー -->
+                                    <li><img src="img/ankoyomogi.jpg" alt="だんご"></li>
+                                    <li><img src="img/kusadango.jpg" alt="だんご"></li>
+                                    <li><img src="img/dango.jpg" alt="だんご"></li>
+                                </ul>
+                            </div>
+                            <div class="items-text items-text02"><!-- 真ん中の商品画像の説明テキスト -->
+                                <p>ここに紹介テキストが入ります。ここに紹介テキストが入ります。ここに紹介テキストが入ります。ここに紹介テキストが入ります。ここに紹介テキストが入ります。ここに紹介テキストが入ります。</p>
+                            </div>
+                        </li>
+                        <li class="items-list-box">
+                            <div class="items-list items-image-list03">
+                                <ul class="items-list-slider"><!-- 一番下の商品画像のスライダー -->
+                                    <li><img src="img/kintsuba.jpg" alt="きんつば"></li>
+                                    <li><img src="img/oshiruko-up.jpg" alt="おしるこ"></li>
+                                    <li><img src="img/kinakoohagi.jpg" alt="おはぎ"></li>
+                                </ul>
+                            </div>
+                            <div class="items-text items-text03"><!-- 一番下の商品画像の説明テキスト -->
+                                <p>ここに紹介テキストが入ります。ここに紹介テキストが入ります。ここに紹介テキストが入ります。ここに紹介テキストが入ります。ここに紹介テキストが入ります。ここに紹介テキストが入ります。</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tobuy"><!-- その他商品・ご購入はこちらボタン -->
+                        <a href="" class="tobuy-btn"><span>その他商品・ご購入はこちら</span></a>
+                    </div>
+                    <div class="tobuy-arrow-pos"><!-- ショッピングページへ促す矢印 -->
+                        <span class="tobuy-arrow"></span>
+                    </div>
+            </section><!------------------------------>
+
+            <section class="about"><!--------------- 店舗紹介 --------------->
+                <div class="section-title"><!-- セクションタイトル -->
+                    <h2>店舗紹介</h2>
+                </div>
+                <div class="intro">
+                    <div class="policy"><!-- 経営理念 -->
+                        <h3>経営理念</h3>
+                        <div class="policy-text"><!-- 経営理念テキスト -->
+                            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                        </div>
+                    </div>
+                    <div class="access"><!-- 店舗所在地 -->
+                        <h3>店舗所在地</h3>
+                        <div class="shop">
+                            <address class="access-address">
+                                <strong class="shop-name">あんこのおみせ</strong><br>
+                                <div class="address-text"><!-- 住所 -->
+                                    <p>
+                                        <strong>〒〇〇〇-☓☓☓☓<br>
+                                        △△△県☐☐☐☐☐☐☐☐☐☐☐☐</strong><br>
+                                        <strong>TEL 01-2345-〇〇〇〇<br>
+                                        FAX 01-2345-〇〇〇〇</strong><br>
+                                        営業時間　☓☓時～△△時（不定休）
+                                    </p>
+                                </div>
+                            </address>
+                            <figure class="shop-image"><!-- 店舗画像 -->
+                                <img src="img/shop.jpg" alt="あんこのおみせ店舗写真">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section><!------------------------------>
+
+            <section class="recruit"><!--------------- 採用情報 --------------->
+                <div class="section-title"><!-- セクションタイトル -->
+                    <h2>採用情報</h2>
+                </div>
+                <div class="recruit-info">
+                    <div class="regular-info"><!-- 正社員 -->
+                        <h4>＜正社員＞</h4>
+                        <div class="condition">
+                            <table><!-- テーブル -->
+                                <tr>
+                                    <th>募集要項</th>
+                                    <td>：</td>
+                                    <td>
+                                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>応募条件</th>
+                                    <td>：</td>
+                                    <td>
+                                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>待遇</th>
+                                    <td>：</td>
+                                    <td>
+                                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="part-time-info"><!-- アルバイト -->
+                        <h4>＜アルバイト＞</h4>
+                        <div class="condition">
+                            <table><!-- テーブル -->
+                                <tr>
+                                    <th>募集要項</th>
+                                    <td>：</td>
+                                    <td>
+                                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>応募条件</th>
+                                    <td>：</td>
+                                    <td>
+                                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>待遇</th>
+                                    <td>：</td>
+                                    <td>
+                                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section><!------------------------------>
+
+        </main><!------------------------------>
+
+        <footer><!--------------- フッター --------------->
+            <figure class="footer-logo"><!-- フッターロゴ -->
+                <img src="img/sakura-illust-wb-300px.png" alt="あんこのおみせ">
+            </figure>
+            <div class="footer-shop-name">
+                <small>&copy;あんこのおみせ</small>
+            </div>
+        </footer><!------------------------------>
+        
+        <div class="scrolldown-nav"><!-- メインのスクロールを促す矢印 -->
+            <div id="scrolldown-nav"></div>
+        </div>
+        <div class="scroll-top"><!-- トップへスクロールする矢印 -->
+            <div class="scroll-top-arrow"><a href=""><span></span></a></div>
+        </div>
+        
+    </div><!-- wrapperクラス終了タグ -->
+    
+    <aside class="side-nav"><!--------------- サイドナビ --------------->
+        <nav class="sticky-nav">
+            <figure class="sticky-nav-image"><!-- サイドナビ　桜イラスト画像 -->
+                <img src="img/sakura-illust-300px.png" alt="">
+            </figure>
+            <ul class="sticky-nav-list" id="sticky-nav-list"><!-- サイドナビリスト -->
+                <li><a href="body" class="btn"><span>top</span></a></li>
+                <li><a href=".items" class="btn"><span>items</span></a></li>
+                <li><a href=".about" class="btn"><span>about</span></a></li>
+                <li><a href=".recruit" class="btn"><span>recruit</span></a></li>
+                <li><a href="" class="btn"><span>shopping</span></a></li>
+            </ul>
+            <span><a href=""><i class="fa facebook fa-facebook-square fa-2x"></i></a></span>
+            <span><a href=""><i class="fa twitter fa-twitter-square fa-2x"></i></a></span>
+        </nav>
+    </aside>
+</div><!-- containerクラス終了タグ -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

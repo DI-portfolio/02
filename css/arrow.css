@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+/* ========== ヘッダー　スクロールを促す矢印 ========== */
+.scrolldown {
+    position: absolute;
+    bottom: 4%;
+    right: 2%;
+    z-index: 1;
+    animation-name: arrowmove;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+@keyframes arrowmove {
+    0% {
+        bottom: 2%;
+    } 50% {
+        bottom: 6%;
+    } 100% {
+        bottom: 2%;
+    }
+}
+#scrolldown {
+    content: '';
+    position: absolute;
+    bottom: 11px;
+    right: 0;
+    width: 3px;
+    height: 50px;
+    background: #eee;
+    border-radius: 4px;
+    box-shadow: -2px -2px 10px #777;
+}
+#scrolldown::before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: -6px;
+    width: 3px;
+    height: 22px;
+    background: #eee;
+    border-radius: 4px;
+    transform: rotate(33deg);
+}
+
+/* ========== 商品紹介　その他商品・ご購入はこちら ========== */
+/* ボタン */
+.tobuy {
+    width: 100%;
+    margin: 0 auto;
+    text-align: right;
+}
+.tobuy-btn {
+    position: relative;
+    display: inline-block;
+    margin-right: 80px;
+    padding: 3px 15px;
+}
+.tobuy-btn span {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #000;
+    z-index: 3;
+}
+.tobuy-btn::before {
+    content: '';
+    position: absolute;
+    top: 11px;
+    right: 0;
+    z-index: 0;
+    border-radius: 50%;
+    background: rgb(184, 183, 183, 0.6);
+    width: 100%;
+    height: 50%;
+    transition: transform 0.4s cubic-bezier(0.9, 0, 0.2, 1) 0s;
+    transform: scale(1, 0);
+    transform-origin: center;
+}
+.tobuy-btn:hover:before {
+    transform: scale(1, 1);
+}
+/* 矢印 */
+.tobuy-arrow-pos {
+    position: relative;
+}
+.tobuy-arrow {
+    display: block;
+    position: absolute;
+    right: 50px;
+    bottom: -6px;
+    width: 100px;
+    height: 3px;
+    background: #444;
+    border-radius: 4px;
+    animation-name: tobuyArrowAnime;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+@keyframes tobuyArrowAnime {
+    0% { right: 6%; }
+    50% { right: 4%; }
+    100% { right: 6%; }
+}
+.tobuy-arrow::before {
+    content: '';
+    position: absolute;
+    right: -4px;
+    bottom: 8px;
+    width: 30px;
+    height: 3px;
+    background: #444;
+    border-radius: 4px;
+    transform: rotate(35deg);
+}
+
+/* ========== サイドナビ　スクロールを促す矢印 ========== */
+/* ダウン */
+.scrolldown-nav {
+    position: fixed;
+    bottom: 4%;
+    right: 2%;
+    z-index: 1;
+    animation-name: arrowmove;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+#scrolldown-nav {
+    opacity: 0;
+    transform: translateX(100px);
+}
+#scrolldown-nav.LeftMove {
+    animation-name: LeftAnime;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+@keyframes LeftAnime {
+    from {
+        opacity: 0;
+        transform: translateX(100);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+#scrolldown-nav.RightMove {
+    animation-name: RightAnime;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+@keyframes RightAnime {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    } to {
+        opacity: 0;
+        transform: translateX(100);
+    }
+}
+
+#scrolldown-nav::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: -6px;
+    width: 3px;
+    height: 22px;
+    background: #000;
+    border-radius: 4px;
+    transform: rotate(33deg);
+    box-shadow: -2px -2px 6px #777;
+}
+#scrolldown-nav::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    width: 3px;
+    height: 50px;
+    background: #000;
+    border-radius: 4px;
+    box-shadow: -2px -2px 6px #777;
+}
+
+/* トップへスクロールする矢印 */
+.scroll-top {
+    position: relative;
+    cursor: pointer;
+}
+.scroll-top-arrow {
+    position: fixed;
+    bottom: 4%;
+    right: 2%;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(150px);
+}
+.scroll-top-arrow span {
+    position: relative;
+    right: -8px;
+    bottom: 3px;
+    display: inline-block;
+    font-size: 0.7rem;
+    color: #000;
+    text-transform: uppercase;
+}
+.scroll-top-arrow::before {
+    content: '';
+    position: absolute;
+    right: 5px;
+    bottom: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(184, 183, 183);
+    z-index: 0;
+    transition: transform 0.4s cubic-bezier(0.9, 0, 0.2, 1) 0s;
+    transform: scale(1, 0);
+    transform-origin: center;
+}
+.scroll-top-arrow:hover::before {
+    transform: scale(1, 1);
+}
+.scroll-top-arrow.UpMove {
+    animation-name: UpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards
+}
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(150);
+    } 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.scroll-top-arrow.DownMove {
+    animation-name: DownAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards
+}
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+    to {
+        opacity: 0;
+        transform: translateY(150);
+    }
+}
+.scroll-top-arrow a::before {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 3px;
+    height: 22px;
+    background: #000;
+    transform: rotate(-45deg);
+    border-radius: 4px;
+    box-shadow: -2px -2px 6px #777;
+    z-index: 1;
+}
+.scroll-top-arrow a::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    width: 3px;
+    height: 22px;
+    background: #000;
+    transform: rotate(45deg);
+    border-radius: 4px;
+    box-shadow: -2px 2px 6px #777;
+    z-index: 1;
+}

@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/* ========== トップ画面　スライダー ========== */
+.header-slider-image {
+    position: relative;
+    z-index: 1;
+    height: 95vh;
+    box-shadow: 0 4px 5px #777;
+}
+.header-slider-item01 {
+    background: url(../img/making.jpg);
+}
+.header-slider-item02 {
+    background: url(../img/azuki.jpg);
+}
+.header-slider-item03 {
+    background: url(../img/anko-making.jpg);
+}
+.header-slider-item {
+    width: 100%;
+    height: 95vh;
+    background-position: center;
+    background-size: cover;
+}
+
+/* ========== 商品紹介画像 ========== */
+/* 商品画像 */
+.items-list {
+    transform: translateX(-700px);
+    z-index: 1;
+}
+.items-list-slider li img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 4px 0 5px #777;    
+}
+.items-list.itemsRightMove {
+    animation-name: itemsRightMoveAnime;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes itemsRightMoveAnime {
+    from { transform: translateX(-700px); }
+    to { transform: translateX(0); }
+}
+.items-list.itemsLeftMove {
+    animation-name: itemsLeftMoveAnime;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes itemsLeftMoveAnime {
+    from { transform: translateX(0); }
+    to { transform: translateX(-700px); }
+}
+/* 商品説明テキスト */
+.items-text {
+    display: inline-block;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 20px;
+    line-height: 1.8rem;
+    opacity: 0;
+}
+.items-text.textAppear {
+    animation-name: itemsTextAppearAnime;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes itemsTextAppearAnime {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

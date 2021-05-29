@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+
+/* ========== 画面幅768px以下時 ==================== */
+
+/* ヘッダーハンバーガーメニュー */
+.open-btn {
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0,0.5);
+    border-radius: 8px;
+    z-index: 900;
+}
+.open-btn span {
+    display: inline-block;
+    transition: all 0.4s;
+    position: absolute;
+    left: 12px;
+    width: 26px;
+    height: 3px;
+    background: #eee;
+    z-index: 2;
+}
+.open-btn span:nth-of-type(1) {
+    top: 10px;
+}
+.open-btn span:nth-of-type(2) {
+    top: 18px;
+}
+.open-btn span:nth-of-type(3) {
+    top: 26px;
+}
+.open-btn span:nth-of-type(3)::after {
+    content: 'menu';
+    position: absolute;
+    top: 9px;
+    left: -2px;
+    font-size: 4px;
+    color: #eee;
+    text-transform: uppercase;
+}
+.open-btn.active span:nth-of-type(1) {
+    top: 18px;
+    transform: rotate(-45deg);
+}
+.open-btn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+.open-btn.active span:nth-of-type(3) {
+    top: 18px;
+    transform: rotate(45deg);
+}
+.open-btn.active span:nth-of-type(3)::after {
+    content: 'close';
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    font-size: 4px;
+    color: #eee;
+    transform: rotate(-45deg);
+    text-transform: uppercase;
+}
+
+/* ヘッダーハンバーガーメニュー　ナビリスト */
+.header-open-nav {
+    visibility: hidden;
+}
+.open-nav {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    width: 30%;
+    height: 65vh;
+    border-radius: 10px 0 0 10px;
+    z-index: 800;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.6s;
+}
+.open-nav.open-nav-active {
+    top: 0;
+}
+.open-nav {
+    margin: 0 auto;
+}
+.open-nav-list {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+}
+.open-nav-list li:last-of-type {
+    margin-top: 14px;
+}
+.open-nav li a {
+    color: #000;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+.open-nav-list li:last-of-type a span {
+    color: #d83c78;
+}
+.header-facebook, .header-twitter {
+    z-index: 999;
+    position: absolute;
+    bottom: 5%;
+}
+.header-facebook {
+    left: 25%;
+}
+.header-twitter {
+    left: 60%;
+}
+
+/* ========== 画面幅768px以下時はヘッダーのスクロールを促す矢印を
+フィックス　色変更 ==========*/
+
+#scrolldown.respoRightMove {
+    animation-name: respoRightAnime;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+@keyframes respoRightAnime {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    } to {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+#scrolldown.respoLeftMove {
+    animation-name: respoLeftAnime;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+@keyframes respoLeftAnime {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .loading-title img {
+        width: 30%;   
+    }
+    .header-logo img {
+        width: 30%;
+    }
+    .header-open-nav {
+        visibility: visible;
+    }
+    .wrapper {
+        width: 100%;
+    }
+    .side-nav {
+        display: none;
+    }
+    .scrolldown {
+        position: fixed;
+    }
+    #scrolldown {
+        background: #444;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    #scrolldown::before {
+        background: #444;
+    }
+    .scrolldown-nav {
+        display: none;
+    }
+    .items-text {
+        padding: 0;
+    }
+    .shop {
+        display: block;
+        margin: 0 auto;
+    }
+    .shop-name {
+        margin-left: 0;
+    }
+    .address-text {
+        width: auto;
+        margin-left: 0;
+    }
+    .shop-image {
+        display: inline-block;
+        text-align: center;
+        margin: 60px 0 0;
+        width: 60%;
+    }
+    .shop-image img {
+        width: 100%;
+    }
+    .condition th {
+        width: 20%;
+    }
+    .footer-logo img {
+        top: 25%;
+        left: 31%;
+        width: 60px;
+    }
+}
